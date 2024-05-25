@@ -1,0 +1,43 @@
+name: InterKit
+main: lol.koblizek.interkit.InterKit
+version: 1.0.0
+api-version: 1.20
+author: KoblizekXD
+description: Paper plugin allowing easy look into server internals during runtime
+commands:
+  interkit:
+    description: Main command for InterKit
+    usage: /<command> [subcommand] [args]
+    aliases: [ik, inter]
+    subcommands:
+      decompile:
+        description: Decompiles a class
+        permission: interkit.module.decompile
+      class:
+        description: Shows basic information about a class
+        permission: interkit.module.info
+      method:
+        description: Shows basic information about a method
+        permission: interkit.module.info
+      package:
+        description: Shows basic information about a package
+        permission: interkit.module.info
+      summary:
+        description: Creates a summary about a class. This includes all fields, methods and inner classes
+        permission: interkit.module.summary
+      jshell:
+        description: Executes a JShell command
+        permission: interkit.module.jshell
+permissions:
+    interkit.module.decompile:
+      description: Allows the user to decompile classes
+      default: op
+    interkit.module.info:
+        description: Allows the user to get basic information about classes and methods
+        default: op
+    interkit.module.summary:
+        description: Allows the user to create a summary about a class
+        default: op
+    interkit.module.jshell:
+        description: Allows the user to execute JShell commands
+        default: op
